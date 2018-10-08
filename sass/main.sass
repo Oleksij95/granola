@@ -1,0 +1,438 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	color: $text
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+.section_title
+	text-transform: uppercase
+	font-family: $fonts-light
+	color: $main-color
+	font-weight: 100
+.section_title_desc
+	color: $main-color-silver
+	font-family: $main-fonts
+	margin-bottom: 45px
+.slick-list
+	padding: 10px 0
+header
+	font-family: $fonts-light
+	background-image: url("../img/header_bg.jpg")
+	background-size: cover
+	color: $main-color
+	padding-bottom: 125px
+	nav
+		height: 70px
+		line-height: 70px
+		border-bottom: 1px solid #e3e0e0
+		margin-bottom: 117px
+		img.logo
+			margin-top: 12px
+		.main_nav
+			list-style: none
+			text-align: right
+			li
+				display: inline-block
+				text-transform: uppercase
+				margin-right: 30px
+				&:last-child
+					margin-right: 0
+				a
+					color: $main-color
+					text-decoration: none
+	h1
+		font-size: 44px
+		line-height: 46px
+		font-weight: 100
+		margin-bottom: 27px
+	p
+		color: $main-color-silver
+		line-height: 24px
+		margin-bottom: 60px
+	span
+		text-transform: uppercase
+	input
+		min-width: 270px
+		height: 45px
+		border-radius: 30px 0 0 30px
+		padding: 0 20px
+		border: 1px solid #f3f5f9
+		margin-top: 15px
+		box-shadow: 0 0 30px #e4e5e9
+	button
+		height: 45px
+		margin-left: -4px
+		border: none
+		cursor: pointer
+		color: #fff
+		text-transform: uppercase
+		min-width: 140px
+		font-size: 16px
+		border-radius: 0 30px 30px 0
+		font-family: $fonts-medium
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#2cd899+0,46df7a+100 */
+		background: #2cd899
+		background: -moz-linear-gradient(45deg, #2cd899 0%, #46df7a 100%)
+		background: -webkit-linear-gradient(45deg, #2cd899 0%,#46df7a 100%)
+		background: linear-gradient(45deg, #2cd899 0%,#46df7a 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2cd899', endColorstr='#46df7a',GradientType=1 )
+
+section#beneficial_features
+	margin-top: 100px
+	font-family: $fonts-light
+	.item_beneficial
+		background-color: #f7f7fa
+		padding: 25px 30px
+		height: 100%
+		img
+			margin-bottom: 20px
+		h4
+			font-size: 30px
+			line-height: 33px
+			color: $main-color
+			font-weight: 100
+			margin-bottom: 15px
+		p
+			color: $main-color-silver
+			font-family: $main-fonts
+			line-height: 21px
+			font-size: 14px
+	.item_2
+		background-color: #f3f3f6
+	.col
+		&:nth-child(1)
+			padding-right: 0
+		&:nth-child(2)
+			padding: 0
+		&:nth-child(3)
+			padding-left: 0
+
+section#our_granola
+	margin-top: 100px
+	margin-bottom: 100px
+	.slick-gr-right, .slick-gr-left
+		width: 50px
+		height: 50px
+		border-radius: 50%
+		box-shadow: 0 2px 10px silver
+		text-align: center
+		line-height: 50px
+		position: absolute
+		top: calc(50% - 25px)
+		cursor: pointer
+	.slick-gr-left
+		left: -70px
+	.slick-gr-right
+		right: -70px
+		img
+			transform: rotate(180deg)
+	.slider
+		box-shadow: 0 0 7px silver
+		transition: all .25s
+		max-width: 260px
+		border-radius: 7px
+		overflow: hidden		
+		&:hover
+			box-shadow: 0 0 17px silver
+		.sliders	
+			img
+				max-height: 150px
+				width: 100%
+			.sliders-body
+				padding: 15px 12px 30px 12px
+				p.granola_name
+					font-family: $fonts-light
+					font-size: 20px
+					color: $main-color
+					margin-bottom: 20px
+					min-height: 44px
+					line-height: 22px
+				p.composition_name
+					font-family: $main-fonts
+					font-size: 15px
+					color: $main-color
+					margin: 0
+				span.granola_price
+					font-family: $fonts-medium
+					font-size: 16px
+					color: $main-color
+					display: inline-block
+					margin-bottom: 10px
+				span.granola_massa
+					font-family: $main-fonts
+					font-size: 14px
+					display: inline-block
+					margin-bottom: 10px
+				p.composition
+					font-family: $main-fonts
+					color: $main-color-silver
+					font-size: 13px
+					line-height: 16px
+				button
+					display: block
+					width: 100%
+					height: 40px
+					line-height: 40px
+					color: #fff
+					text-transform: uppercase
+					border-radius: 30px
+					border: none
+					margin-top: 22px
+					font-size: 16px
+					font-family: $fonts-medium
+					cursor: pointer
+					background: #2bd899
+					background: -moz-linear-gradient(45deg, #2bd899 0%, #39de6f 100%)
+					background: -webkit-linear-gradient(45deg, #2bd899 0%,#39de6f 100%)
+					background: linear-gradient(45deg, #2bd899 0%,#39de6f 100%)
+					filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2bd899', endColorstr='#39de6f',GradientType=1 )
+
+section#granula_composition
+	background-color: #f7f7fb
+	padding-top: 55px
+	table
+		tr
+			td
+				&:first-child
+					width: 190px
+					position: relative
+					overflow: hidden
+	.title_product
+		&:after
+			content: ""
+			width: 100%
+			height: 1px
+			display: inline-block
+			position: absolute
+			background-image: url("../img/granola_img/menu_tochka.png")
+			top: 18px
+			margin-left: 1px
+	button.to_order
+		display: inline-block
+		width: 240px
+		height: 40px
+		margin-top: 48px
+		margin-bottom: 15px
+		background: #2bd899
+		background: -moz-linear-gradient(45deg, #2bd899 0%, #39de6f 100%)
+		background: -webkit-linear-gradient(45deg, #2bd899 0%,#39de6f 100%)
+		background: linear-gradient(45deg, #2bd899 0%,#39de6f 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2bd899', endColorstr='#39de6f',GradientType=1 )
+		border: none
+		border-radius: 30px
+		text-transform: uppercase
+		color: #fff
+		font-size: 16px
+		font-family: $fonts-medium
+		cursor: pointer
+	p.desc_granola_buy
+		font-size: 12px
+
+section#granola_history
+	background-image: url("../img/granola_img/history_bgp.jpg")
+	background-size: contain
+	background-repeat: no-repeat
+	.history_wrapper
+		background-color: rgba(255, 255, 255, .75)
+		padding: 40px
+		border-radius: 25px
+		max-width: 940px
+		margin: auto
+		margin-top: 250px
+		box-shadow: 0 7px 30px silver
+		h2
+			text-transform: uppercase
+			font-size: 36px
+			font-family: $fonts-light
+			color: $main-color
+			font-weight: 100
+		img
+			width: 100%
+			max-height: 232px
+		p
+			font-size: 14px
+			font-family: $main-fonts
+			color: $main-color-silver
+			span
+				color: $main-color
+				font-family: $fonts-medium
+section#recipes_granola
+	margin-top: 100px
+	.sort_block
+		height: 45px
+		background-color: #f3f3f6
+		line-height: 45px
+		padding-left: 15px
+		padding-right: 15px
+		border-radius: 7px 7px 0 0
+		font-family: $main-fonts
+		ul
+			li
+				min-width: 100px
+				padding-right: 40px
+				text-transform: uppercase
+				font-size: 13px
+				&:first-child
+					color: $main-color-silver
+
+				a
+					color: $main-color
+					text-decoration: none
+	.recipes_item
+		max-width: 360px
+		border-radius: 9px
+		overflow: hidden
+		box-shadow: 0 3px 10px silver
+		margin-top: 30px
+		min-height: 394px
+		transition: all .5s
+		&:hover
+			box-shadow: 0 5px 30px silver
+		img
+			max-height: 180px
+			width: 100%
+		.recipes_body
+			padding: 15px
+			color: $main-color-silver
+			p.recipes_name
+				color: $main-color
+				font-family: $fonts-light
+				font-size: 20px
+				margin-bottom: 7px
+			p.recipes_time
+				font-size: 16px
+				font-family: $main-fonts
+			span
+				color: $main-color
+				font-size: 16px
+				font-family: $main-fonts
+			p.recipes_menu
+				font-size: 14px
+				font-family: $main-fonts
+				line-height: 20px
+section#feadback
+	margin-top: 100px
+	.section_title
+		margin-bottom: 40px
+	.user_info
+		max-width: 360px
+		box-shadow: 0 0 10px silver
+		text-align: center
+		padding: 25px 20px 10px 20px
+		height: 100%
+		border-radius: 7px
+	.user_photo_wrapper
+		border-radius: 50%
+		width: 120px
+		height: 120px
+		overflow: hidden
+		margin: auto
+	.user_name
+		text-transform: uppercase
+		font-size: 16px
+		color: $main-color
+		font-family: $fonts-light
+		font-feight: 100
+		margin-top: 6px
+	.user_comment
+		font-size: 13px
+		font-family: $main-fonts
+		color: $main-color-silver
+	.user_soc_line
+		i
+			color: #31db84
+			margin: 0 7px
+			font-size: 17px
+section#lorems
+	margin-top: 100px
+	margin-bottom: 100px
+
+section#contacts
+	.container
+		border-top: 1px solid #e9ebe5
+		padding: 38px 15px
+		color: $main-color
+		font-family: $main-fonts
+	.contacts_title
+		text-transform: uppercase
+		font-size: 16px
+		color: $main-color
+		font-family: $fonts-light
+		margin-bottom: 7px
+	.mb0
+		margin-bottom: 0
+	.soc	
+		width: 40px
+		height: 40px
+		border-radius: 50%
+		background-color: #f7f7fa
+		display: inline-block
+		margin-right: 7px
+		line-height: 40px
+		text-align: center
+		cursor: pointer
+		i
+			color: $main-color-silver
+	p
+		margin-bottom: 2px
+	input
+	    height: 45px
+	    -webkit-border-radius: 30px 0 0 30px
+	    border-radius: 30px 0 0 30px
+	    padding: 0 20px
+	    border: 1px solid #f3f5f9
+	    margin-top: 15px
+	    -webkit-box-shadow: 0 0 30px #e4e5e9
+	    box-shadow: 0 0 30px #e4e5e9
+	button
+		width: 65px
+		height: 43px
+		cursor: pointer
+		border: none
+		color: #fff
+		margin-left: -5px
+		border-radius: 0 30px 30px 0
+		background: #2bd899
+		background: -moz-linear-gradient(45deg, #2bd899 0%, #39de6f 100%)
+		background: -webkit-linear-gradient(45deg, #2bd899 0%,#39de6f 100%)
+		background: linear-gradient(45deg, #2bd899 0%,#39de6f 100%)
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2bd899', endColorstr='#39de6f',GradientType=1 )
+section#rights
+	height: 45px
+	line-height: 45px
+	.wrapper
+		border-top: 1px solid #e9ebe5
+@import "media" // Always at the end
